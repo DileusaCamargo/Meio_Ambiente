@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Python Interativo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: #306998;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    section {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #306998;
+    }
+
+    ul {
+      list-style: square;
+      margin-left: 20px;
+    }
+
+    button {
+      background: #ffd43b;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      margin: 10px 0;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #b94ae4;
+    }
+
+    .detalhes {
+      display: none;
+      margin-top: 15px;
+      padding: 15px;
+      background: #eaf2fa;
+      border-left: 5px solid #306998;
+      border-radius: 5px;
+    }
+
+    .quiz {
+      margin-top: 30px;
+      padding: 20px;
+      background: #fff3cd;
+      border: 1px solid #ffeeba;
+      border-radius: 10px;
+    }
+
+    .resultado {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #155724;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Curso de Python</h1>
+    <p>Aprenda programação de forma prática e divertida!</p>
+  </header>
+
+  <section>
+    <h2>O que você vai aprender:</h2>
+    <ul>
+      <li>Introdução ao Python e lógica de programação</li>
+      <li>Estruturas de decisão e repetição</li>
+      <li>Funções e módulos</li>
+      <li>Manipulação de arquivos</li>
+      <li>Orientação a objetos</li>
+      <li>Bibliotecas populares (pandas, matplotlib)</li>
+    </ul>
+
+    <button onclick="mostrarDetalhes()">Ver detalhes do curso</button>
+    <div class="detalhes" id="detalhes">
+      <p>Nosso curso é 100% prático, com exercícios reais e projetos aplicados. Ao final, você terá desenvolvido um portfólio incrível para mostrar suas habilidades em Python.</p>
+    </div>
+  </section>
+
+  <section class="quiz">
+    <h2>Quiz Rápido 🐍</h2>
+    <p>Qual é a saída do código abaixo?</p>
+    <pre>
+x = 5
+y = 2
+print(x ** y)
+    </pre>
+    <button onclick="verificarResposta(25)">25</button>
+    <button onclick="verificarResposta(10)">10</button>
+    <button onclick="verificarResposta(7)">7</button>
+    <p id="resultado" class="resultado"></p>
+  </section>
+
+  <script>
+    function mostrarDetalhes() {
+      const detalhes = document.getElementById("detalhes");
+      if (detalhes.style.display === "block") {
+        detalhes.style.display = "none";
+      } else {
+        detalhes.style.display = "block";
+      }
+    }
+
+    function verificarResposta(resposta) {
+      const resultado = document.getElementById("resultado");
+      if (resposta === 25) {
+        resultado.textContent = "✅ Correto! 5 ** 2 = 25";
+      } else {
+        resultado.textContent = "❌ Ops! Tente novamente.";
+      }
+    }
+  </script>
+</body>
+</html>

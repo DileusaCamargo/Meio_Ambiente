@@ -1,0 +1,263 @@
+/* ===============================
+   Estilo geral do cabeçalho
+=============================== */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cf8e8e;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+    z-index: 100;
+    flex-wrap: wrap; /* ajuda em telas pequenas */
+}
+
+/* Container esquerdo (hamburguer + logo + menu) */
+.container-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo */
+.logo {
+    width: 45px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Ícones à direita */
+.container-direita img {
+    width: 28px;
+    height: auto;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.container-direita img:hover {
+    transform: scale(1.1);
+}
+
+/* ===============================
+   Menu padrão (desktop)
+=============================== */
+.lista-menu {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.lista-menu li {
+    position: relative;
+}
+
+.lista-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    display: block;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover dos links */
+.lista-menu a:hover {
+    color: #ffcc00;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+/* ===============================
+   Submenus (dropdowns)
+=============================== */
+.lista-menu li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #8e3c3c;
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+    display: none;
+    min-width: 200px;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+.lista-menu li:hover > ul {
+    display: block;
+}
+
+.lista-menu li ul li a {
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.lista-menu li ul li a:hover {
+    background-color: #a24d4d;
+    color: #ffcc00;
+}
+
+/* ===============================
+   Botão hamburguer
+=============================== */
+.menu-botao {
+    display: none;
+}
+
+.menu-icone {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* ===============================
+   Responsivo (até 992px)
+=============================== */
+@media (max-width: 992px) {
+    .cabecalho {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+    }
+
+    .container-esquerda {
+        gap: 10px;
+    }
+
+    .lista-menu a {
+        font-size: 0.95rem;
+        padding: 6px 10px;
+    }
+
+    .container-direita img {
+        width: 24px;
+    }
+}
+
+/* ===============================
+   Responsivo (até 768px)
+=============================== */
+@media (max-width: 768px) {
+    /* Layout principal */
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-icone {
+        display: block;
+        position: absolute;
+        top: 12px;
+        right: 20px;
+    }
+
+    .lista-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #dcc2c2;
+        padding: 10px 0;
+        border-top: 1px solid #eca8a8;
+    }
+
+    /* Exibir menu quando o checkbox estiver marcado */
+    .menu-botao:checked ~ .lista-menu {
+        display: flex;
+    }
+
+    /* Links mobile */
+    .lista-menu a {
+        color: #5a2c2c;
+        padding: 12px 20px;
+        border-bottom: 1px solid #e6bcbc;
+    }
+
+    .lista-menu a:hover {
+        background-color: #b57272;
+        color: #fff;
+    }
+
+    /* Submenus mobile */
+    .lista-menu li ul {
+        position: static;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #b57272;
+        display: none;
+    }
+
+    .lista-menu li:hover > ul {
+        display: block;
+    }
+
+    .container-direita {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* ===============================
+   Responsivo (até 480px)
+=============================== */
+@media (max-width: 480px) {
+    .logo {
+        width: 35px;
+    }
+
+    .lista-menu a {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .menu-icone {
+        font-size: 26px;
+    }
+}
+
+/* ===============================
+   Rodapé
+=============================== */
+.rodape {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.container-rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.links-rodape {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.links-rodape a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.links-rodape a:hover {
+    color: #fff;
+}

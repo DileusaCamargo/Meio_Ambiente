@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Introdução ao JavaScript</title>
+  <style>
+    :root{--accent:#0b63d6;--muted:#6b7280;background:#f7fafc;color:#0f172a;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+    *{box-sizing:border-box}
+    body{margin:0;padding:0;background:linear-gradient(180deg,#ffffff 0%, #f3f6fb 100%);color:var(--accent)}
+    header{background:#0b63d6;color:#fff;padding:28px 20px;text-align:center}
+    header h1{margin:0;font-size:clamp(1.4rem,2.5vw,2rem)}
+    main{max-width:980px;margin:28px auto;padding:20px}
+    .card{background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(12,35,64,0.06);padding:18px;margin-bottom:18px}
+    h2{color:#0f172a;margin-top:0}
+    p.lead{color:var(--muted);margin-bottom:12px}
+    pre{background:#0f172a;color:#e6eef8;padding:12px;border-radius:8px;overflow:auto}
+    code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono',monospace}
+    .examples{display:grid;grid-template-columns:1fr;gap:12px}
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;border:none;cursor:pointer}
+    label{display:block;margin-bottom:6px;color:var(--muted)}
+    input[type="text"], input[type="number"]{padding:8px;border-radius:8px;border:1px solid #e6eef8;width:100%}
+    footer{text-align:center;color:var(--muted);padding:14px 0;font-size:0.9rem}
+    @media(min-width:700px){.examples{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Introdução ao JavaScript — exemplos práticos</h1>
+    <p style="margin:6px 0 0;color:rgba(255,255,255,0.85)">Pequena página com conceitos e exemplos que você pode testar no navegador</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>O que é JavaScript?</h2>
+      <p class="lead">JavaScript é a linguagem de programação usada para tornar páginas web interativas. Enquanto HTML estrutura o conteúdo e CSS cuida do estilo, o JavaScript altera conteúdo, responde a eventos e comunica com servidores.</p>
+      <ul>
+        <li>Sintaxe básica: variáveis, funções, decisões (if), loops.</li>
+        <li>Trabalha no navegador (DOM) e no servidor (Node.js).</li>
+        <li>Interatividade: manipulação de elementos, formulários e requisições.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Sintaxe básica</h2>
+      <p class="lead">Trechos simples para começar.</p>
+      <pre><code>// declarar variáveis
+const nome = 'Maria';
+let idade = 28;
+
+// função simples
+function saudacao(n) {
+  return `Olá, ${n}!`;
+}
+
+console.log(saudacao(nome));
+</code></pre>
+    </section>
+
+    <section class="card examples">
+      <div>
+        <h2>Exemplo 1 — Alterar texto (DOM)</h2>
+        <p class="lead">Clique no botão para ver o JavaScript alterar o conteúdo da página.</p>
+        <div style="padding:12px;background:#f8fafc;border-radius:8px">
+          <p id="mensagem">Mensagem original: JavaScript ainda não foi executado.</p>
+          <button class="btn" id="bt-muda">Clique para mudar</button>
+        </div>
+      </div>
+
+      <div>
+        <h2>Exemplo 2 — Pequena calculadora</h2>
+        <p class="lead">Soma dois números informados.</p>
+        <div style="padding:12px;background:#f8fafc;border-radius:8px">
+          <label>Valor A</label>
+          <input id="a" type="number" value="5">
+          <label>Valor B</label>
+          <input id="b" type="number" value="3">
+          <div style="margin-top:8px">
+            <button class="btn" id="bt-soma">Somar</button>
+          </div>
+          <p id="resultado" style="margin-top:8px;color:var(--muted)">Resultado: —</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Exemplo 3 — Validação simples de formulário</h2>
+      <p class="lead">Verifica se o nome tem ao menos 3 caracteres antes de submeter.</p>
+      <form id="form-demo" onsubmit="return false;" style="padding:12px;background:#f8fafc;border-radius:8px">
+        <label>Nome</label>
+        <input id="nome" type="text" placeholder="Digite o nome">
+        <div style="margin-top:10px">
+          <button class="btn" id="bt-enviar">Enviar</button>
+        </div>
+        <p id="erro" style="color:#b91c1c;margin-top:8px"></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Como testar</h2>
+      <ol>
+        <li>Salve este arquivo como <code>index.html</code>.</li>
+        <li>Abra no navegador (duplo clique ou arraste para a janela do navegador).</li>
+        <li>Abra o console (F12 → Console) para ver mensagens.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Próximos passos</h2>
+      <p class="lead">Quando já entender o básico, experimente:</p>
+      <ul>
+        <li>Manipular listas de elementos (querySelectorAll, forEach).</li>
+        <li>Fazer requisições com fetch() para obter dados de uma API.</li>
+        <li>Aprender sobre Promises e async/await.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Página de estudo • Feito para aprender conceitos práticos de JavaScript
+  </footer>
+
+  <script>
+    // Exemplo 1 — DOM
+    document.getElementById('bt-muda').addEventListener('click', function(){
+      const p = document.getElementById('mensagem');
+      p.textContent = 'Mensagem alterada: Olá! Você clicou no botão.';
+    });
+
+    // Exemplo 2 — calculadora
+    document.getElementById('bt-soma').addEventListener('click', function(){
+      const a = Number(document.getElementById('a').value);
+      const b = Number(document.getElementById('b').value);
+      const soma = a + b;
+      document.getElementById('resultado').textContent = 'Resultado: ' + soma;
+    });
+
+    // Exemplo 3 — validação
+    document.getElementById('bt-enviar').addEventListener('click', function(){
+      const nome = document.getElementById('nome').value.trim();
+      const erro = document.getElementById('erro');
+      if(nome.length < 3){
+        erro.textContent = 'O nome deve ter ao menos 3 caracteres.';
+      } else {
+        erro.textContent = '';
+        alert('Formulário ok — nome: ' + nome);
+      }
+    });
+  </script>
+</body>
+</html>

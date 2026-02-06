@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos de HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+            line-height: 1.6;
+        }
+        /* Cabeçalho */
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        /* Container dos cursos */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        /* Card */
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card-content h3 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+        .card-content p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .card-content a {
+            text-decoration: none;
+            color: white;
+            background: #007BFF;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .card-content a:hover {
+            background: #0056b3;
+        }
+        /* Seções extras */
+        section {
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+        section h2 {
+            color: #007BFF;
+            margin-bottom: 15px;
+        }
+        ul {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>📚 Cursos de HTML</h1>
+        <p>Aprenda a criar sites do zero com nossos cursos gratuitos e pagos</p>
+    </header>
+
+<a href="index.html" class="btn-voltar">
+        <span class="setinha"> ← </span>
+        Voltar
+    </a>
+
+    <!-- Cursos -->
+    <div class="container">
+        <div class="card">
+            <img src="https://picsum.photos/300/180?random=1" alt="Curso Básico de HTML">
+            <div class="card-content">
+                <h3>Curso Básico de HTML</h3>
+                <p>Aprenda os fundamentos do HTML para começar a criar suas primeiras páginas web.</p>
+                <a href="#">Acessar Curso</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/300/180?random=2" alt="HTML Avançado">
+            <div class="card-content">
+                <h3>HTML Avançado</h3>
+                <p>Aprofunde seus conhecimentos em HTML5, acessibilidade e boas práticas.</p>
+                <a href="#">Acessar Curso</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/300/180?random=3" alt="HTML e CSS">
+            <div class="card-content">
+                <h3>HTML + CSS</h3>
+                <p>Combine HTML e CSS para criar páginas mais bonitas, modernas e responsivas.</p>
+                <a href="#">Acessar Curso</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- O que é HTML -->
+    <section>
+        <h2>📖 O que é HTML?</h2>
+        <p>O <strong>HTML (HyperText Markup Language)</strong> é a linguagem padrão utilizada para estruturar páginas da web. 
+           Ele define os elementos que compõem um site, como títulos, parágrafos, links, imagens, tabelas e muito mais.</p>
+        <p>Com o HTML, você cria a base de qualquer site. Em conjunto com o <strong>CSS</strong> e o <strong>JavaScript</strong>, 
+           é possível desenvolver páginas completas, dinâmicas e interativas.</p>
+    </section>
+
+    <!-- Principais Tags -->
+    <section>
+        <h2>🔖 Principais Tags do HTML</h2>
+        <ul>
+            <li><code>&lt;h1&gt; até &lt;h6&gt;</code> → Títulos e subtítulos</li>
+            <li><code>&lt;p&gt;</code> → Parágrafos</li>
+            <li><code>&lt;a&gt;</code> → Links</li>
+            <li><code>&lt;img&gt;</code> → Imagens</li>
+            <li><code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code> → Listas</li>
+            <li><code>&lt;table&gt;</code> → Tabelas</li>
+            <li><code>&lt;form&gt;</code> → Formulários</li>
+        </ul>
+    </section>
+
+    <!-- Vantagens -->
+    <section>
+        <h2>✅ Vantagens de aprender HTML</h2>
+        <ul>
+            <li>É a base de qualquer site na internet.</li>
+            <li>Fácil de aprender, mesmo para iniciantes.</li>
+            <li>Fundamental para quem deseja ser desenvolvedor web.</li>
+            <li>Permite criar desde páginas simples até projetos complexos.</li>
+            <li>Usado em conjunto com CSS e JavaScript para construir sites modernos.</li>
+        </ul>
+    </section>
+</body>
+</html>

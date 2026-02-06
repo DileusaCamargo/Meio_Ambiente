@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabeçalho com Menu e Ícones</title>
+
+    <!-- Importa os ícones do Font Awesome -->
+    <!-- Essa biblioteca possui vários ícones prontos que podem ser usados com <i class="..."> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Arquivo CSS externo onde você vai estilizar o cabeçalho -->
+    <link rel="stylesheet" href="estilo2.css">
+    <link rel="stylesheet" href="estilo3.css">
+</head>
+<body>
+    
+
+<!-- Cabeçalho da página -->
+<header class="cabecalho">
+    
+    <!-- Container do lado esquerdo: logo + menu -->
+    <div class="container-esquerda">
+
+        <!-- Logo do site -->
+        <img src="lapis.png" alt="Logo" class="logo">
+
+        <!-- Menu principal -->
+        <ul class="lista-menu">
+
+            <!-- ITEM 1: Programação -->
+            <li>
+                <a href="#"><i class="fas fa-code"></i> Programação</a>
+                <ul>
+                    <li><a href="#"><i class="fab fa-python"></i> Python</a></li>
+                    <li><a href="#"><i class="fab fa-java"></i> Java</a></li>
+                    <li><a href="#"><i class="fab fa-js-square"></i> JavaScript</a></li>
+                </ul>
+            </li>
+
+            <!-- ITEM 2: Front-end -->
+            <li>
+                <a href="#"><i class="fas fa-laptop-code"></i> Front-end</a>
+                <ul>
+                    <li><a href="#"><i class="fab fa-html5"></i> HTML</a></li>
+                    <li><a href="#"><i class="fab fa-css3-alt"></i> CSS</a></li>
+                    <li><a href="#"><i class="fab fa-react"></i> React</a></li>
+                </ul>
+            </li>
+
+            <!-- ITEM 3: Infraestrutura -->
+            <li>
+                <a href="#"><i class="fas fa-server"></i> Infraestrutura</a>
+                <ul>
+                    <li><a href="#"><i class="fas fa-network-wired"></i> Redes</a></li>
+                    <li><a href="#"><i class="fas fa-cloud"></i> Cloud</a></li>
+                </ul>
+            </li>
+
+            <!-- ITEM 4: Business -->
+            <li>
+                <a href="#"><i class="fas fa-briefcase"></i> Business</a>
+                <ul>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Marketing</a></li>
+                    <li><a href="#"><i class="fas fa-handshake"></i> Vendas</a></li>
+                </ul>
+            </li>
+
+            <!-- ITEM 5: Design & UX -->
+            <li>
+                <a href="#"><i class="fas fa-pencil-ruler"></i> Design & UX</a>
+                <ul>
+                    <li><a href="#"><i class="fas fa-paint-brush"></i> UI Design</a></li>
+                    <li><a href="#"><i class="fas fa-drafting-compass"></i> Prototipagem</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Container do lado direito: ícones de atalho -->
+    <div class="container-direita">
+        <a href="#"><i class="fas fa-heart"></i></a>
+        <a href="#"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fas fa-user"></i></a>
+    </div>
+</header>
+
+
+<!-- Segunda parte da página -->
+<main class="conteudo">
+
+    <!-- Seção 1: Introdução -->
+    <section class="introducao">
+        <h1>Bem-vindo ao Mundo da Programação</h1>
+        <p>A programação é a base para criar sites, aplicativos, jogos e muito mais.
+           Aqui você encontra conteúdos de várias linguagens e tecnologias.</p>
+        <img src="programacao.jpg" alt="Imagem Programação">
+    </section>
+
+    <!-- Seção 2: Benefícios -->
+    <section class="beneficios">
+        <h2>Por que aprender Programação?</h2>
+        <ul>
+            <li><i class="fa-solid fa-check"></i> Desenvolver soluções criativas</li>
+            <li><i class="fa-solid fa-check"></i> Melhorar o raciocínio lógico</li>
+            <li><i class="fa-solid fa-check"></i> Ter mais oportunidades no mercado</li>
+        </ul>
+    </section>
+
+    <!-- Seção 3: Recursos -->
+    <section class="recursos">
+        <h2>Recursos Recomendados</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="python.jpg" alt="Python">
+                <h3>Curso de Python</h3>
+                <p>Aprenda a programar em Python de forma prática e divertida.</p>
+                <a href="pyton.html">Saiba mais</a>
+            </div>
+            <div class="card">
+                <img src="html.jpg" alt="HTML">
+                <h3>Curso de HTML</h3>
+                <p>Construa páginas web do zero com HTML e CSS.</p>
+                <a href="cursohtml.html">Saiba mais</a>
+            </div>
+            <div class="card">
+                <img src="infra.jpg" alt="Cloud">
+                <h3>Infraestrutura Cloud</h3>
+                <p>Entenda como funcionam os serviços em nuvem.</p>
+                <a href="#">Saiba mais</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+<!-- Rodapé -->
+<footer class="rodape">
+    <div class="container-rodape">
+        <p>&copy; 2025 - Todos os direitos reservados.</p>
+        <ul class="links-rodape">
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

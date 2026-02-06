@@ -1,0 +1,90 @@
+/* Estilo geral do cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cf8e8e;
+    padding: 10px 20px;
+    color: white;
+}
+
+/* Container esquerdo (hamburguer + logo + menu) */
+.container-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo */
+.logo {
+    width: 40px;
+    height: auto;
+}
+
+/* Ícones à direita */
+.container-direita img {
+    width: 28px;
+    height: auto;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.container-direita img:hover {
+    transform: scale(1.1);
+}
+
+/* Menu padrão */
+.lista-menu {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+
+.lista-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.lista-menu a:hover {
+    color: #ffcc00;
+}
+
+/* Botão hamburguer */
+.menu-botao {
+    display: none;
+}
+
+.menu-icone {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* Responsivo: até 768px mostra hamburguer */
+@media (max-width: 768px) {
+    .lista-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #dcc2c2;
+        padding: 10px 0;
+        border-top: 1px solid #eca8a8;
+    }
+
+    /* Exibir menu quando o checkbox estiver marcado */
+    .menu-botao:checked + .menu-icone + .logo + .lista-menu {
+        display: flex;
+    }
+
+    /* Mostrar ícone hamburguer */
+    .menu-icone {
+        display: block;
+    }
+}

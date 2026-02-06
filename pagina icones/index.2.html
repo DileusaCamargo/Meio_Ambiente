@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabeçalho com Menu e Ícones</title>
+
+    <!-- Importa os ícones do Font Awesome -->
+    <!-- Essa biblioteca possui vários ícones prontos que podem ser usados com <i class="..."> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Arquivo CSS externo onde você vai estilizar o cabeçalho -->
+    <link rel="stylesheet" href="estilo2.css">
+   
+</head>
+<body>
+    
+<!-- Cabeçalho da página -->
+<header class="cabecalho">
+    
+    <!-- Container do lado esquerdo: logo + menu -->
+    <div class="container-esquerda">
+
+        <!-- Logo do site -->
+        <img src="lapis.png" alt="Logo" class="logo">
+
+        <!-- Menu principal -->
+        <ul class="lista-menu">
+
+            <!-- ITEM 1: Programação -->
+            <li>
+                <!-- Ícone de código (fas = sólido, fa-code = ícone de código) -->
+                <a href="#"><i class="fas fa-code"></i> Programação</a>
+
+                <!-- Submenu com linguagens -->
+                <ul>
+                    <!-- Ícone do Python (fab = marcas, fa-python = logo Python) -->
+                    <li><a href="#"><i class="fa-light fa-ghost"></i> Python</a></li>
+                    <!-- Ícone do Java -->
+                    <li><a href="#"><i class="fab fa-java"></i> Java</a></li>
+                    <!-- Ícone do JavaScript -->
+                    <li><a href="#"><i class="fab fa-js-square"></i> JavaScript</a></li>
+                </ul>
+            </li>
+                        
+        </ul>
+    </div>
+
+    <!-- Container do lado direito: ícones de atalho -->
+    <div class="container-direita">
+        <!-- Ícone de coração -->
+        <a href="#"><i class="fas fa-heart"></i></a>
+        <!-- Ícone de home -->
+        <a href="#"><i class="fas fa-home"></i></a>
+        <!-- Ícone de usuário -->
+        <a href="#"><i class="fas fa-user"></i></a>
+    </div>
+</header>
+
+</body>
+</html>

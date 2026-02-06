@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design & Arte - Nova Estrutura</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+  }
+
+  /* NAVBAR */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    z-index: 1000;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+  }
+  nav a:hover { color: #f39c12; }
+
+  /* HERO */
+  .hero {
+    height: 90vh;
+    background: url("python.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+  }
+  .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+  .hero p { font-size: 1.2rem; max-width: 600px; }
+  .btn { background: #f39c12; border: none; padding: 12px 25px; color: white; cursor: pointer; border-radius: 5px; margin-top: 20px; }
+  .btn:hover { background: #e67e22; }
+
+  section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+
+  /* PORTFÓLIO GRID */
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  .portfolio-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  .portfolio-item:hover { transform: scale(1.05); }
+  .portfolio-item img { width: 100%; height: 180px; object-fit: cover; }
+  .portfolio-item h3 { margin: 15px; }
+
+  /* GALERIA */
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  .galeria img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  .galeria img:hover { transform: scale(1.05); }
+
+  /* EXPOSIÇÃO */
+  .exposicao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  .artista {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  .artista:hover { transform: scale(1.03); }
+  .artista img { width: 100%; height: 220px; object-fit: cover; }
+  .artista h3 { margin: 15px 0 5px; }
+
+  /* RODAPÉ */
+  footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">🎨 Design & Arte</div>
+  <div>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#exposicao">Exposição</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Explore Criatividade</h1>
+  <p>Portfólio, galerias de fotos e exposições artísticas em um só lugar.</p>
+  <button class="btn">Comece Aqui</button>
+</div>
+
+<section id="portfolio">
+  <h2>Portfólio de Designer Gráfico</h2>
+  <div class="portfolio">
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1581091215367-59ab6a12c4f2?w=600" alt="Identidade Visual">
+      <h3>Identidade Visual</h3>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600" alt="Cartaz Criativo">
+      <h3>Cartaz Criativo</h3>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?w=600" alt="Social Media">
+      <h3>Social Media</h3>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <h2>Galeria de Fotografia</h2>
+  <div class="galeria">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600" alt="Paisagem">
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600" alt="Pessoa">
+    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=600" alt="Cidade">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600" alt="Natureza">
+    <img src="https://images.unsplash.com/photo-1526318472351-bc6c2f0d1bfc?w=600" alt="Arte">
+  </div>
+</section>
+
+<section id="exposicao">
+  <h2>Exposição de Arte</h2>
+  <div class="exposicao">
+    <div class="artista">
+      <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?w=600" alt="Obra 1">
+      <h3>Artista A</h3>
+      <p>"Cores do Futuro"</p>
+    </div>
+    <div class="artista">
+      <img src="https://images.unsplash.com/photo-1549887534-4a23f0aee8a0?w=600" alt="Obra 2">
+      <h3>Artista B</h3>
+      <p>"Expressões da Alma"</p>
+    </div>
+    <div class="artista">
+      <img src="https://images.unsplash.com/photo-1526318472351-bc6c2f0d1bfc?w=600" alt="Obra 3">
+      <h3>Artista C</h3>
+      <p>"O Caos e a Cidade"</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Design & Arte | Desenvolvido por Leusa</p>
+</footer>
+
+</body>
+</html>
